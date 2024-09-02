@@ -1,0 +1,131 @@
+/* التصميم الافتراضي للأجهزة الكبيرة (ديسكتوب) */
+html, body {
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.bg-main {
+    background-color: blueviolet !important;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    right: 0;
+    box-shadow: 0 20px 5px black;
+    color: white;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul a { 
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+#one {
+    background-color: aqua;
+}
+
+#two {
+    background-color: red;
+}
+
+#three {
+    background-color: blue;
+}
+
+.test {
+    width: 100%;
+    height: 100vh;
+}
+
+.imp {
+    padding: 10px;
+}
+
+.imp p {
+    padding: inherit;
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 200px;
+}
+
+.blog {
+    background-color: rgb(0, 255, 136);
+    width: 100%;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+}
+
+.item {
+    width: 33%;
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* ميديا كويريز */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row; /* تغيير الاتجاه ليكون جنب بعض */
+        align-items: center;
+    }
+    
+    .nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .nav ul a {
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    .item {
+        width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav ul a {
+        font-size: 16px;
+        padding: 8px;
+    }
+    
+    .imp p {
+        margin-top: 100px;
+        font-size: 14px;
+    }
+
+    .item img {
+        margin-top: 30px;
+    }
+}
